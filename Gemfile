@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '5.0.0'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -14,6 +14,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'devise-bootstrap-views', '~> 0.0.7'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'aws-sdk', '~> 1.6'
+gem 'acts_as_votable', '~> 0.10.0'
 
 
 
