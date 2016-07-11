@@ -3,6 +3,9 @@
 	<div class="white-border">
 		<%= image_tag p.image.url(:medium) %>
 		<br>
+		<div class="username">
+			<%= p.user.username %>
+		</div>
 		<div class="description">
 			<%= p.description %>
 		</div>

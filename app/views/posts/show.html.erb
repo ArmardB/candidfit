@@ -1,3 +1,15 @@
-<%= image_tag(@post.image.url(:medium)) %>
-<br>
-<%= @post.description %>
+<div class="col-sm-6 col-sm-offset-3">
+	<% @post.each do |p| %>
+	<div class="white-border">
+		<%= image_tag p.image.url(:medium) %>
+		<br>
+		<div class="username">
+			<%= p.user.username %>
+		</div>
+		<div class="description">
+			<%= p.description %>
+		</div>
+	</div>
+	<% end %>
+	
+</div>
