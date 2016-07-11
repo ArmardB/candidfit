@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
 
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index, :show]
 
 	def new
-		@post = Post.new
+		@post = current_user.posts.build
 	end
 
 	def index
@@ -14,11 +15,11 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(post_params)
-		@post.user = current_user
+		@post = current_user.posts.build(post_params)
+
 		if @post.save
 			flash[:success] = "Post sucessfully created"
-			redirect_to @post
+			redirect_to root_path
 		else 
 			flash[:error] = @post.errors.full_messages
 			render 'new'
@@ -37,7 +38,7 @@ class PostsController < ApplicationController
 	def update
 		if @post.update(post_params)
 			flash[:success] = "Post successfully updated"
-			redirect_to @post
+			redirect_to root_path
 		else
 			render :edit
 		end
