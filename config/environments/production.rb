@@ -10,9 +10,10 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  config.action_mailer.default_url_options = { host: 'cfit.herokuapp.com/', :protocal => 'https' }
-
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'cfit.herokuapp.com', :protocol => 'https' }
+
+  
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
