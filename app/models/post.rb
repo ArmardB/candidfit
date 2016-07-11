@@ -20,14 +20,14 @@ class Post < ApplicationRecord
 
   private
 
-  require 'aws-sdk'
+  # require 'aws-sdk'
 
-  def upload_to_s3
-  	s3 = Aws::S3::Resource.new
-  	fit_user = User.find(Thread.current[:user_id])
-		obj = s3.bucket(ENV['AWS_S3_BUCKET']).object("#{fit_user}/#{image_file_name}")
-		obj.upload_file(upload.path, acl:'public-read')
-		self.key = obj.public_url
-  end
+  # def upload_to_s3
+  # 	s3 = Aws::S3::Resource.new
+  # 	fit_user = User.find(Thread.current[:user_id])
+		# obj = s3.bucket(ENV['AWS_S3_BUCKET']).object("#{fit_user}/#{image_file_name}")
+		# obj.upload_file(upload.path, acl:'public-read')
+		# self.key = obj.public_url
+  # end
 
 end
