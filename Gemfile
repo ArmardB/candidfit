@@ -13,6 +13,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem "paperclip", "~> 5.0.0"
 gem 'devise-bootstrap-views', '~> 0.0.7'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'aws-sdk', '~> 2'
+
 
 
 group :development, :test do

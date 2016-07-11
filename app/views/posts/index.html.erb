@@ -4,7 +4,9 @@
 		<%= image_tag p.image.url(:medium) %>
 		<br>
 		<div class="username">
-			<%= p.user.username %>
+			<ul class="show-posts">
+				<li><%#= link_to p.user.username, user_posts_path(:id) %></li>
+			</ul>
 		</div>
 		<div class="description">
 			<%= p.description %>
