@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
 	
-	before_save :upload_to_s3
+	# before_save :upload_to_s3
 
 	has_attached_file :image, styles: { medium: "500x500>", thumb: "100x100>" },
      :default_url => "/images/:style/missing.png",
