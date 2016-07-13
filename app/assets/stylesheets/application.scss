@@ -18,10 +18,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+	background: rgb(137,195,235); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(137,195,235,1) 0%, rgba(235,241,246,1) 0%, rgba(171,211,238,1) 50%, rgba(213,235,251,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(137,195,235,1) 0%,rgba(235,241,246,1) 0%,rgba(171,211,238,1) 50%,rgba(213,235,251,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(137,195,235,1) 0%,rgba(235,241,246,1) 0%,rgba(171,211,238,1) 50%,rgba(213,235,251,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89c3eb', endColorstr='#d5ebfb',GradientType=1 );
+}
+
 .white-border {
 border: 1px solid #e6e6e6;
 padding: 15px;
 margin-bottom: 20px;
+background-color: #fff;
 }
 
 img {
@@ -63,4 +72,12 @@ span.glyphicon.glyphicon-heart {
 
 a.btn.btn-default.btn-sm {
 	color:red;
+}
+
+.nav-row {
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
